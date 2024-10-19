@@ -3,27 +3,40 @@
 #include <time.h>
 
 //definir variables
-double a;
-double b;
-double h;
+double a = 0;
+double b = 1.5;
+double h = 5;
 double x;
 double y;
+int vf;
+int i = 0;
+int n = 1000000;
+int aciertos = 0;
+double integral = 0;
 
 //definir las funciones a utilizar
 double arrojar_piedrax(double a,double b);
 double arrojar_piedray(double h);
 unsigned long long rdtsc();
+int cae_debajo(double x, double y);
 
 //funcion principal
 int main() {
 
     srand(rdtsc());
-    a = 10;
-    b = 50;
-    h = 100;
-    x = arrojar_piedrax(a,b);
-    y = arrojar_piedray(h);
-    printf("X: %.2f\n Y: %.2f\n",x,y);
+
+    while (i<n) {
+        x = arrojar_piedrax(a,b);
+        y = arrojar_piedray(h);
+        vf = cae_debajo(x,y);
+        i = i+1; 
+        if (vf == 1) {
+            aciertos = aciertos + 1;
+        }
+    }
+
+    integral = (b-a)*h*aciertos/n;
+    printf(" La integral es: %.5f\n Se realizaron %i intentos \n Se obtuvieron %i aciertos\n",integral,n,aciertos);
 
     return 0;
 }
@@ -40,6 +53,18 @@ double arrojar_piedrax(double a,double b) {
 double arrojar_piedray(double h) {
     double escala = rand() / (double)RAND_MAX;
     return 0 + escala * (h); 
+}
+
+//Comprobar donde cae la piedra 
+int cae_debajo(double x, double y) {
+    double fx = (-5*x*x) + 8*x;
+    int logica;
+    if (y<fx) {
+      logica = 1;    
+    } else {
+      logica = 0;
+    }
+  return logica;
 }
 
 //Contar los ciclos del procesador en 64bits para generar numeros aleatorios de coma flotante con alta entropia
