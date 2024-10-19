@@ -1,0 +1,127 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Página-1" id="RzJJoPFtvWnFjXrNtwN0">
+    <mxGraphModel dx="806" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-2" target="kc7aTzF0wdDd4e7PX8u6-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-2" value="Arrojar &quot;i&quot; piedra entre&lt;div&gt;a y b para x y de 0 a h para y&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="354" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-4" target="kc7aTzF0wdDd4e7PX8u6-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-4" value="Definir la funcion f(x)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="354" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-7" target="kc7aTzF0wdDd4e7PX8u6-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-7" value="Numero de lanzamientos &quot;n&quot;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="354" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-10" target="kc7aTzF0wdDd4e7PX8u6-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-22" value="Si" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="kc7aTzF0wdDd4e7PX8u6-20">
+          <mxGeometry x="-0.05" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-10" target="kc7aTzF0wdDd4e7PX8u6-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="520" />
+              <mxPoint x="100" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-29" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=19;" vertex="1" connectable="0" parent="kc7aTzF0wdDd4e7PX8u6-28">
+          <mxGeometry x="-0.8116" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-10" value="¿La piedra cayo por debajo de la funcion?" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-15" target="kc7aTzF0wdDd4e7PX8u6-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-18" value="Si" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=19;" vertex="1" connectable="0" parent="kc7aTzF0wdDd4e7PX8u6-17">
+          <mxGeometry x="-0.1333" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-15" target="kc7aTzF0wdDd4e7PX8u6-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-32" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=19;" vertex="1" connectable="0" parent="kc7aTzF0wdDd4e7PX8u6-31">
+          <mxGeometry x="-0.5544" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-15" value="i &amp;lt; n" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="354" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-19" target="kc7aTzF0wdDd4e7PX8u6-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="640" />
+              <mxPoint x="60" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-19" value="nx=nx+1" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-23" target="kc7aTzF0wdDd4e7PX8u6-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-23" value="i = i+1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-30" value="La integral es&lt;div&gt;Area*nx/n&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-33" target="kc7aTzF0wdDd4e7PX8u6-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-33" value="Arrrojar piedra" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-34" target="kc7aTzF0wdDd4e7PX8u6-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-34" value="Generar un numero random entre a y b&lt;div&gt;asignarle &quot;x&quot;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-36" target="kc7aTzF0wdDd4e7PX8u6-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-36" value="Generar un numero random entre 0 y h&lt;div&gt;asignarle &quot;y&quot;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-38" value="Regresar los valores de &quot;x&quot; y &quot;y&quot;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1010" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-40" target="kc7aTzF0wdDd4e7PX8u6-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-40" value="¿Cayo debajo la piedra?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kc7aTzF0wdDd4e7PX8u6-41" target="kc7aTzF0wdDd4e7PX8u6-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-41" value="Calcular el valor de la funcion en &quot;x&quot;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kc7aTzF0wdDd4e7PX8u6-43" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
