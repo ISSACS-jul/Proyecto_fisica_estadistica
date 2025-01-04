@@ -9,7 +9,7 @@ double area = 0;
 double a = 0;
 double b = 1;
 int i = 0;
-int n = 85;
+int n;
 
 //definir las funciones a utilizar
 unsigned long long rdtsc();
@@ -20,15 +20,17 @@ int main() {
 
   srand(rdtsc());
   
+  scanf("%d",&n);
+
   while (i<n) {
       x = numero_aleatorio(a,b);
-      y = (-5*x*x)+(8*x);
+      y = -5*x*x+8*x;
       Y = Y + y;
       i = i + 1;
   }
   double esp = Y/n;
   area = (b - a)*esp;
-  printf(" La integral de la funion es: %.5f\n Con %i intentos\n Valor esperado %.5f\n",area,n,esp);
+  printf("%.20f\n",area);
 
   return 0;
 }
@@ -47,4 +49,5 @@ unsigned long long rdtsc(){
     __asm__ __volatile__ ("rdtsc" : "=a" (lo), "=d" (hi));
     return ((unsigned long long)hi << 32) | lo;
 }
+
 
