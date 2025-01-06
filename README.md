@@ -1,7 +1,12 @@
-cap 11: Numerical and Monte Carlo Methods
+<div align="center">
+  
+# Montecarlo Mean-method
+![](media/montecarlo/menu_principal.png)
 
-Cree 3 nuevas ramas para que nuestros trabajos no se superpongan, las ramas son 
+![](media/montecarlo/Integrar.png)
 
-1. primer-metodo
-2. segundo-metodo
-3. tercer-metodo
+![](media/montecarlo/Calibrar.png)
+
+![](media/montecarlo/Inspeccionar.png)
+
+</div>
