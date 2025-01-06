@@ -5,8 +5,6 @@ double x;
 double y = 0;
 double Y = 0;
 double area = 0;
-double a = 0.0;
-double b = 2.0;
 int i = 0;
 long long int n;
 
@@ -20,7 +18,6 @@ int main() {
 
     while (i < n) {
         x = numero_aleatorio(a, b);
-        y = 2*x;
         Y = Y + y;
         i = i + 1;
     }
