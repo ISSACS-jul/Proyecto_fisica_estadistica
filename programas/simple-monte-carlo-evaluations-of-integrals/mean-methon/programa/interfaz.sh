@@ -41,6 +41,10 @@ actualizar_valores() {
   ecuacion=$(cat ecuacion.txt)
 }
 
+reconstruir_C() {
+  cp ./back_C/mean_method.c ./
+}
+
 #-----------------------------------------------------Menus--------------------------------------------------------------------
 
 menu_principal() {
@@ -159,6 +163,7 @@ modificar_limites() {
 
 while true; do
   actualizar_valores
+  reconstruir_C
   clear
   menu_principal
   read -p "Seleccione una opcion: " opcion
