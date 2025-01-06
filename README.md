@@ -1,19 +1,12 @@
-cap 5: Few-Body Problems: The Motion of the Planets 
+<div align="center">
+  
+# Montecarlo Mean-method
+![](media/montecarlo/menu_principal.png)
 
-cap 6: The Chaotic Motion of Dynamical Systems
+![](media/montecarlo/Integrar.png)
 
-cap 7: Random Processes
+![](media/montecarlo/Calibrar.png)
 
-cap 8: The Dynamics of Many-Particle Systems
+![](media/montecarlo/Inspeccionar.png)
 
-cap 11: Numerical and Monte Carlo Methods
-
-cap 12: Percolation
-
-cap 13: Fractals and Kinetic Growth Models
-
-cap 16: Quantum Systems
-
-cap 17: Visualization and Rigid Body Dynamics
-
-cap 18: Seeing in Special and General Relativity
+</div>
