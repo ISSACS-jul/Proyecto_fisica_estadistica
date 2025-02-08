@@ -3,28 +3,22 @@ import subprocess #la uso para ejectar el programa en C que me da los valores de
 
 #defino algunas variables
 
-with open("./ecuacion.txt", "r") as archivo:
+with open("./particion.txt", "r") as archivo:
     ecuacion = archivo.read()
 
-with open("./limite_inferiorx.txt", "r") as archivo:
+with open("./limite_inferior_p.txt", "r") as archivo:
     ax = float(archivo.read())
 
-with open("./limite_superiorx.txt", "r") as archivo:
+with open("./limite_superior_p.txt", "r") as archivo:
     bx = float(archivo.read())
 
-with open("./limite_inferiory.txt", "r") as archivo:
+with open("./limite_inferior_q.txt", "r") as archivo:
     ay = float(archivo.read())
 
-with open("./limite_superiory.txt", "r") as archivo:
+with open("./limite_superior_q.txt", "r") as archivo:
     by = float(archivo.read())
 
-with open("./limite_inferiorz.txt", "r") as archivo:
-    az = float(archivo.read())
-
-with open("./limite_superiorz.txt", "r") as archivo:
-    bz = float(archivo.read())
-
-with open("./n_necesaria.txt", "r") as archivo:
+with open("./n.txt", "r") as archivo:
     n = int(archivo.read())
 
 #ecuacion = input("ingrese la ecuacion: ejemplo (-5*x*x+8*x)\n")
@@ -34,11 +28,11 @@ with open("./n_necesaria.txt", "r") as archivo:
 
 #----------------------------[Modificar linea con ecuacion]--------------------------------
 
-archivo_c = "mean_method.c"
-nueva_linea = f"        fy = {ecuacion};\n"
-patron = "        z = numero_aleatorioz(az, bz);\n"
+archivo_c = "mean_method_particion.c"
+nueva_linea = f"        fy = exp({ecuacion});\n"
+patron = "        q = numero_aleatorioq(ay, by);\n"
 
-nueva_linea_limites = f"double ax = {ax};\ndouble bx = {bx};\ndouble ay = {ay};\ndouble by = {by};\ndouble az = {az};\ndouble bz = {bz};\n"
+nueva_linea_limites = f"double ax = {ax};\ndouble bx = {bx};\ndouble ay = {ay};\ndouble by = {by};\n"
 patron_limites = "double area = 0;"
 
 # Leer el contenido del archivo
@@ -72,7 +66,7 @@ with open(archivo_c, 'w') as archivo:
 # Compilar el archivo con gcc
 try:
     subprocess.run(
-        ["gcc", archivo_c, "-o", "mean_method"],
+        ["gcc", archivo_c, "-o", "mean_method", "-lm"],
         check=True
     )
 except subprocess.CalledProcessError as e:
@@ -98,7 +92,7 @@ except subprocess.CalledProcessError as e:
 #--------borrar la lines modificada-------------------------
 
 # Pedir al usuario la línea que desea eliminar
-linea_a_borrar = f"        y = {ecuacion};\n"
+linea_a_borrar = f"        fy = exp({ecuacion});\n"
 
 # Leer el contenido del archivo
 with open(archivo_c, 'r') as archivo:
@@ -164,34 +158,6 @@ with open(archivo_c, 'r') as archivo:
 lineas_actualizadas = [linea for linea in lineas if linea.strip() != linea_a_borrar.strip()]
 
 # Sobrescribir el archivo con las líneas actualizadas 5
-with open(archivo_c, 'w') as archivo:
-    archivo.writelines(lineas_actualizadas)
-
-#pedir al usuario las lineas que desea eliminar 6
-linea_a_borrar = f"double az = {az};\n"
-
-# Leer el contenido del archivo 6
-with open(archivo_c, 'r') as archivo:
-    lineas = archivo.readlines()
-
-# Filtrar las líneas, excluyendo la línea a borrar 6
-lineas_actualizadas = [linea for linea in lineas if linea.strip() != linea_a_borrar.strip()]
-
-# Sobrescribir el archivo con las líneas actualizadas 6
-with open(archivo_c, 'w') as archivo:
-    archivo.writelines(lineas_actualizadas)
-
-# Pedir al usuario la línea que desea eliminar 7
-linea_a_borrar = f"double bz = {bz};\n"
-
-# Leer el contenido del archivo 7
-with open(archivo_c, 'r') as archivo:
-    lineas = archivo.readlines()
-
-# Filtrar las líneas, excluyendo la línea a borrar 7
-lineas_actualizadas = [linea for linea in lineas if linea.strip() != linea_a_borrar.strip()]
-
-# Sobrescribir el archivo con las líneas actualizadas 7
 with open(archivo_c, 'w') as archivo:
     archivo.writelines(lineas_actualizadas)
 

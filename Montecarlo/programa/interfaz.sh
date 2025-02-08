@@ -36,8 +36,12 @@ continuar="Presione Enter para continuar"
 actualizar_valores() {
   n_necesaria=$(cat n_necesaria.txt)
   constante=$(cat pendiente.txt)
-  a=$(cat limite_inferior.txt)
-  b=$(cat limite_superior.txt)
+  ax=$(cat limite_inferiorx.txt)
+  bb=$(cat limite_superiorx.txt)
+  ay=$(cat limite_inferiory.txt)
+  by=$(cat limite_superiory.txt)
+  az=$(cat limite_inferiorz.txt)
+  bz=$(cat limite_superiorz.txt)
   ecuacion=$(cat ecuacion.txt)
 }
 
@@ -58,7 +62,7 @@ menu_principal() {
   echo -e "⠀⣯⡇⣻⣿⣿⣿⣿⣷⣾⣿⣬⣥⣭⣽⣿⣿⣧⣼⡇⣯⣇⣹⣿⣿⣿⣿⣧⠀${CYAN}⠀░▀░▀░▀▀▀░▀░▀░▀░▀░░░░░▀░▀░▀▀▀░░▀░░▀░▀░▀▀▀░▀▀░ ${YELLOW} ⠀⣯⡇⣻⣿⣿⣿⣿⣷⣾⣿⣬⣥⣭⣽⣿⣿⣧⣼⡇⣯⣇⣹⣿⣿⣿⣿⣧⠀⠀${RESET}";
   echo " ";
   echo -e "${BLUE_BLOND}                               Escriba el valor de la opcion que desea${RESET}";
-  echo -e "${GREEN}                     1.Integrar     2.calibrar     3.Inspeccionar codigo${RED}     4.Salir${RESET}"
+  echo -e "${GREEN}                     1.Integrar     2.calibrar     3.Particion     4.Inspeccionar codigo${RED}     5.Salir${RESET}"
 }
 
 menu_integrar() {
@@ -76,7 +80,9 @@ menu_integrar() {
   echo -e " ${MAGENTA_BLOND}
             --------------------------------------------
                     Ecuacion almacenda:$ecuacion 
-                    limites almacenados:[$a,$b] 
+                    limites almacenados x :[$ax,$bx]
+                    limites almacenados y :[$ay,$by]
+                    limites almacenados z :[$az,$bz] 
                     N almacenada:$n_necesaria
             -------------------------------------------- ${RESET}"
 }
@@ -114,7 +120,9 @@ ${BLUE}⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜�
   echo -e " ${MAGENTA_BLOND}
                            --------------------------------------------
                                   Ecuacion almacenda:$ecuacion 
-                                  limites almacenados:[$a,$b] 
+                                  limites almacenados x :[$ax,$bx]
+                                  limites almacenados y :[$ay,$by]
+                                  limites almacenados z :[$az,$bz] 
                                   N almacenada:$n_necesaria
                            -------------------------------------------- ${RESET}"
 }
@@ -137,7 +145,9 @@ ${LYME}⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀ ⣀⣀⣤⣤⣤⣀⡀                     
   echo -e " ${MAGENTA_BLOND}
                                 --------------------------------------------
                                        Ecuacion almacenda:$ecuacion 
-                                       limites almacenados:[$a,$b] 
+                                       limites almacenados x :[$ax,$bx]
+                                       limites almacenados y :[$ay,$by]
+                                       limites almacenados z :[$az,$bz] 
                                        N almacenada:$n_necesaria
                                 -------------------------------------------- ${RESET}"
 }
@@ -258,6 +268,33 @@ while true; do
       done
     ;;
     3)
+      cp ./back_C/mean_method_particion.c ./mean_method_particion.c
+      clear
+      menu_principal
+      echo -e "Presione 1 para usar Kb con exponente" 
+      echo -e "Presione 2 para usar Kb sin exponente"
+      read -p "Seleccione una opcion:  " opcion
+      case "$opcion" in
+        1) 
+          python particion_datos.py
+          python particion.py
+          echo -e "$continuar"
+          read 
+        ;;
+        2) 
+          python particion_datos_disminuidaKb.py
+          python particion.py
+          echo -e "$continuar"
+          read  
+        ;;
+        *) 
+          error
+          break 
+        ;;
+      esac
+      
+    ;;
+    4)
       while true; do
         actualizar_valores
         clear
@@ -286,7 +323,7 @@ while true; do
         esac
       done
     ;;
-    4)
+    5)
       exit
     ;;
     *)

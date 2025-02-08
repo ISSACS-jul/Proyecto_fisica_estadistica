@@ -13,8 +13,12 @@ l = 1
 n = 1
 
 ecuacion = input("ingrese la ecuacion a integrar/evaluar\n")
-a = float(input("ingrese el limite inferior\n"))
-b = float(input("ingrese el limite superior\n"))
+ax = float(input("ingrese el limite inferior x\n"))
+bx = float(input("ingrese el limite superior x\n"))
+ay = float(input("ingrese el limite inferior y\n"))
+by = float(input("ingrese el limite superior y\n"))
+az = float(input("ingrese el limite inferior z\n"))
+bz = float(input("ingrese el limite superior z\n"))
 p = float(input("ingrese el numero de pareja de datos que desea para hacer la regresion\n"))
 
 #defino la funcion a integrar
@@ -27,10 +31,10 @@ print(f"{ecuacion}\n")
 #----------------------------[Modificar linea con ecuacion]--------------------------------
 
 archivo_c = "mean_method.c"
-nueva_linea = f"        y = {ecuacion};\n"
-patron = "        x = numero_aleatorio(a, b);\n"
+nueva_linea = f"        fy = {ecuacion};\n"
+patron = "        z = numero_aleatorioz(az, bz);\n"
 
-nueva_linea_limites = f"double a = {a};\ndouble b = {b};\n"
+nueva_linea_limites = f"double ax = {ax};\ndouble bx = {bx};\ndouble ay = {ay};\ndouble by = {by};\ndouble az = {az};\ndouble bz = {bz};\n"
 patron_limites = "double area = 0;"
 
 # Leer el contenido del archivo
@@ -122,20 +126,35 @@ archivo_ecuacion = open("ecuacion.txt", "w")
 archivo_ecuacion.write(f"{ecuacion}")
 archivo_ecuacion.close()
 
-archivo_a = open("limite_inferior.txt", "w")
-archivo_a.write(f"{a}")
+archivo_a = open("limite_inferiorx.txt", "w")
+archivo_a.write(f"{ax}")
 archivo_a.close()
 
-archivo_b = open("limite_superior.txt", "w")
-archivo_b.write(f"{b}")
+archivo_b = open("limite_superiorx.txt", "w")
+archivo_b.write(f"{bx}")
 archivo_b.close()
 
+archivo_a = open("limite_inferiory.txt", "w")
+archivo_a.write(f"{ay}")
+archivo_a.close()
+
+archivo_b = open("limite_superiory.txt", "w")
+archivo_b.write(f"{by}")
+archivo_b.close()
+
+archivo_a = open("limite_inferiorz.txt", "w")
+archivo_a.write(f"{az}")
+archivo_a.close()
+
+archivo_b = open("limite_superiorz.txt", "w")
+archivo_b.write(f"{bz}")
+archivo_b.close()
 #------------------------------------------------------------
 
 #--------borrar la lines modificada-------------------------
 
 # Pedir al usuario la línea que desea eliminar
-linea_a_borrar = f"        y = {ecuacion};\n"
+linea_a_borrar = f"        fy = {ecuacion};\n"
 
 # Leer el contenido del archivo
 with open(archivo_c, 'r') as archivo:
@@ -149,7 +168,7 @@ with open(archivo_c, 'w') as archivo:
     archivo.writelines(lineas_actualizadas)
 
 # Pedir al usuario la línea que desea eliminar 2
-linea_a_borrar = f"double a = {a};\n"
+linea_a_borrar = f"double ax = {ax};\n"
 
 # Leer el contenido del archivo 2
 with open(archivo_c, 'r') as archivo:
@@ -163,7 +182,61 @@ with open(archivo_c, 'w') as archivo:
     archivo.writelines(lineas_actualizadas)
 
 # Pedir al usuario la línea que desea eliminar 3
-linea_a_borrar = f"double b = {b};\n"
+linea_a_borrar = f"double bx = {bx};\n"
+
+# Leer el contenido del archivo 3
+with open(archivo_c, 'r') as archivo:
+    lineas = archivo.readlines()
+
+# Filtrar las líneas, excluyendo la línea a borrar 3
+lineas_actualizadas = [linea for linea in lineas if linea.strip() != linea_a_borrar.strip()]
+
+# Sobrescribir el archivo con las líneas actualizadas 3
+with open(archivo_c, 'w') as archivo:
+    archivo.writelines(lineas_actualizadas)
+#----------------------------------------
+linea_a_borrar = f"double ay = {ay};\n"
+
+# Leer el contenido del archivo 2
+with open(archivo_c, 'r') as archivo:
+    lineas = archivo.readlines()
+
+# Filtrar las líneas, excluyendo la línea a borrar 2
+lineas_actualizadas = [linea for linea in lineas if linea.strip() != linea_a_borrar.strip()]
+
+# Sobrescribir el archivo con las líneas actualizadas 2
+with open(archivo_c, 'w') as archivo:
+    archivo.writelines(lineas_actualizadas)
+
+# Pedir al usuario la línea que desea eliminar 3
+linea_a_borrar = f"double by = {by};\n"
+
+# Leer el contenido del archivo 3
+with open(archivo_c, 'r') as archivo:
+    lineas = archivo.readlines()
+
+# Filtrar las líneas, excluyendo la línea a borrar 3
+lineas_actualizadas = [linea for linea in lineas if linea.strip() != linea_a_borrar.strip()]
+
+# Sobrescribir el archivo con las líneas actualizadas 3
+with open(archivo_c, 'w') as archivo:
+    archivo.writelines(lineas_actualizadas)
+#----------------------------------------
+linea_a_borrar = f"double az = {az};\n"
+
+# Leer el contenido del archivo 2
+with open(archivo_c, 'r') as archivo:
+    lineas = archivo.readlines()
+
+# Filtrar las líneas, excluyendo la línea a borrar 2
+lineas_actualizadas = [linea for linea in lineas if linea.strip() != linea_a_borrar.strip()]
+
+# Sobrescribir el archivo con las líneas actualizadas 2
+with open(archivo_c, 'w') as archivo:
+    archivo.writelines(lineas_actualizadas)
+
+# Pedir al usuario la línea que desea eliminar 3
+linea_a_borrar = f"double bz = {bz};\n"
 
 # Leer el contenido del archivo 3
 with open(archivo_c, 'r') as archivo:
