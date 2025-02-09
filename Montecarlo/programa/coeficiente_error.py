@@ -4,6 +4,7 @@ import scipy #lo uso para tener una integral mas exacta y obtener un delta x
 import math # lo uso para poder hacer el logaritmo natural de los valores y hacer una regresion lineal
 
 from scipy.integrate import quad
+import scipy.integrate as spi
 from scipy.stats import linregress
 
 #defino algunas variables
@@ -22,11 +23,11 @@ bz = float(input("ingrese el limite superior z\n"))
 p = float(input("ingrese el numero de pareja de datos que desea para hacer la regresion\n"))
 
 #defino la funcion a integrar
-def f(x):
+def f(z, y, x):
     return eval(ecuacion)
 
 #hago la integral con quad
-integral, error = quad(f, a, b)
+integral, error = spi.tplquad(f, ax, bx, lambda x: ay, lambda x: by, lambda x, y: az, lambda x, y: bz)
 print(f"{ecuacion}\n")
 #----------------------------[Modificar linea con ecuacion]--------------------------------
 
